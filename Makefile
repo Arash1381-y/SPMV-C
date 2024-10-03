@@ -1,7 +1,7 @@
 CC := gcc
 Includes := -I./src/data-structures -I./src/utils -I./src/models
 CFLAGS := -Wall -Wextra -Werror -g -std=c99 -pedantic $(Includes)
-LIBS := -fopenmp -mavx512f
+LIBS := -fopenmp -mavx2 -march=native 
 
 # Source files
 SRC := $(wildcard src/data-structures/*.c) $(wildcard src/utils/*.c) $(wildcard src/models/**/*.c)
@@ -24,12 +24,12 @@ all: benchmark
 # Object file compilation rule
 $(OBJ_DIR)/%.o: %.c
 	mkdir -p $(OBJ_DIR)
-	$(CC) $(CFLAGS) $(LIBS) -c $< -o $@
+	$(CC) $(CFLAGS) $(LIBS) -O3 -c $< -o $@
 
 # Build benchmark executable
 benchmark: $(OBJ) benchmark/test_bench.c
 	mkdir -p $(BIN_DIR)
-	$(CC) $(CFLAGS) $(LIBS) -o $(BIN_DIR)/benchmark $^
+	$(CC) $(CFLAGS) $(LIBS) -O3 -o $(BIN_DIR)/benchmark $^
 
 # Test target to compile individual test executables
 test: $(TEST_BIN)
