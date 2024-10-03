@@ -8,7 +8,7 @@
 #include "vec.h"
 #include "sparse-multithread/matrix_mult_CSR_multi_thread.h"
 #include "sparse-singlethread/matrix_mult_CSR_single_thread.h"
-#include "vectorize/matrix_mult_CSR_vectorize.h"
+#include "vectorized/matrix_mult_CSR_vectorize.h"
 #include "baseline/matrix_mult_baseline.h"
 
 int main() {
