@@ -5,6 +5,7 @@
 #ifndef C_SPMV_MATRIX_H
 #define C_SPMV_MATRIX_H
 
+#include <stdlib.h>
 #include <stdbool.h>
 
 

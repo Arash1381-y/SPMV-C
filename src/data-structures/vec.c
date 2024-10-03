@@ -14,7 +14,7 @@ void init_vec(
 
     if (!random_init) return;
 
-    for (int i = 0; i < len; i++) {
+    for (size_t i = 0; i < len; i++) {
         double rand_value = simple_rand();
         if (rand_value < sparsity) {
             v->val[i] = 0;
@@ -27,7 +27,7 @@ void init_vec(
 void print_vec(
         vec *v
 ) {
-    for (int i = 0; i < v->len; i++) {
+    for (size_t i = 0; i < v->len; i++) {
         printf("%f, ", v->val[i]);
     }
     printf("\n");

@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdbool.h>
-#include "../data-structure/matrix.h"
-#include "../data-structure/vec.h"
+#include "../data-structures/matrix.h"
+#include "../data-structures/vec.h"
 #include "./vectorize/matrix_mult_CSR_vectorize.h"
 #include "./baseline/matrix_mult_baseline.h"
 #include "./sparse-singlethread/matrix_mult_CSR_single_thread.h"
