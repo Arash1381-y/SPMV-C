@@ -4,7 +4,6 @@
 
 - **Single-threaded implementation**
 - **Multi-threaded implementation**
-- **Baseline version**
 - **Compressed Row Storage (CRS/CSR) format**
 - **Vectorized operations using AVX instructions**
 
